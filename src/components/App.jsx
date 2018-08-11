@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Form from './Form.jsx';
 
-const App = () => {
-  return <h1>Form React</h1>
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <Form />
+      </div>
+    )
+  }
 }
 
 export default App
