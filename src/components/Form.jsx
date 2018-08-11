@@ -6,11 +6,18 @@ class Form extends Component {
     this.state={
       email: ''
     };
+    this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    console.log('form submitted');
+  handleSubmit(event) {
+    event.preventDefault();
+    console.log('email value is ', this.state.email);
+  }
+
+  handleEmailChange(event) {
+    console.log('email was changed', this);
+    this.setState({email: event.target.value});
   }
 
   render() {
@@ -20,6 +27,7 @@ class Form extends Component {
           type='text'
           placeholder='Email'
           value={this.state.email}
+          onChange={this.handleEmailChange}
         />
         <button>Send</button>
       </form>
