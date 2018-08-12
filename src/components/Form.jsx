@@ -24,10 +24,11 @@ class Form extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
-          type='text'
+          type='email'
           placeholder='Email'
           value={this.state.email}
           onChange={this.handleEmailChange}
+          required
         />
         <button>Send</button>
       </form>
